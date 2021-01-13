@@ -1,0 +1,40 @@
+.superInput {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 2rem;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: black;
+}
+.superInput input::placeholder, .errorInput::placeholder{
+    color: black;
+    opacity: .5;
+    padding: 0 10px;
+}
+
+.errorInput {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid red;
+    border-radius: 0;
+    outline: none;
+    height: 2rem;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.error {
+    color: red;
+}
+
