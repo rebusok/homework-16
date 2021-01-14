@@ -2,9 +2,10 @@
 .wrapped {
 	background: black;
 	min-height: 91vh;
+	margin: 0;
+	padding: 0;
 }
 .wrapped a {
-
 	position: absolute;
 	font-size: 14px;
 	top: 50%;
@@ -12,8 +13,6 @@
 	text-decoration: none;
 	color: black;
 	font-weight: bold;
-
-
 }
 /* I. Containers */
 figure {
@@ -98,6 +97,24 @@ figcaption span {
 @media screen and (min-width: 720px) {
 	figure {
 		font-size: 7px;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 710px) {
+	figure {
+		font-size: 5px;
+		left: 40%;
+	}
+	.sadMac{
+		margin: 1rem auto;
+	}
+	.wrapped a {
+		position: absolute;
+		font-size: 13px;
+		top: 56%;
+		right: 36%;
+		text-decoration: none;
+		color: black;
+		font-weight: bold;
 	}
 }
 @media screen and (min-width: 1440px) {
