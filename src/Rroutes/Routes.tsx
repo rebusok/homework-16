@@ -1,5 +1,5 @@
 import React from "react";
-import {Switch, Route, Redirect} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 
 import EntNewPassword from "../pages/EntNewPassword/EntNewPassword";
 import Error404 from "../pages/Error404/Error404";

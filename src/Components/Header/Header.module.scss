@@ -1,0 +1,17 @@
+nav {
+	max-width: 1200px;
+	padding: 2% 10%;
+	.wrapper {
+		max-width: 100%;
+		display: flex;
+		justify-content: space-between;
+		a {
+			text-decoration: none;
+			color: black;
+		}
+		.active{
+			font-weight: bold;
+		}
+	}
+
+}

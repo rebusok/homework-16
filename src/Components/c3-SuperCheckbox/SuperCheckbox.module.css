@@ -6,9 +6,12 @@
 .checkbox_inp span {
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
-
-.checkbox_inp span::before  {
+.checkbox_inp  input[type=checkbox]:checked + span  {
+    color: rgb( 43, 153, 91 );
+}
+.checkbox_inp input[type=checkbox] + span::before  {
  
     content: "";
     display: inline-block;    
@@ -28,15 +31,23 @@
 	top: 5px;
     height: 5px;
     width: 12px;
-    border-left: 2px solid red;
-    border-bottom: 2px solid red;    
+    border-left: 2px solid rgb( 43, 153, 91 );
+    border-bottom: 2px solid rgb( 43, 153, 91 );
     transform: rotate(-45deg);
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 .checkbox_inp input[type=checkbox]:checked + span::after {
     opacity: 1;
+
 }
+.checkbox_inp input[type=checkbox]:checked + span::before {
+    opacity: 1;
+    border: 1px solid rgb( 43, 153, 91 ) !important;
+}
+
+
 .checkbox_inp input[type="checkbox"] {
     position: absolute;
 	z-index: -1;
