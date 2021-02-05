@@ -1,5 +1,5 @@
 import React from "react";
-import {Route, Switch} from 'react-router-dom';
+import {Redirect, Route, Switch} from 'react-router-dom';
 
 import EntNewPassword from "../pages/EntNewPassword/EntNewPassword";
 import Error404 from "../pages/Error404/Error404";
@@ -10,13 +10,14 @@ import Registration from "../pages/Registration/Registration";
 import Test from "../pages/Test/Test";
 
 
-export const PATH = {
-    ENT_NEW_PASSWORD: "/new_password",
-    LOGIN: '/login',
-    PASSWORD_REC: '/pass_rec',
-    PROFILE: '/profile',
-    REGISTRATION: '/registration',
-    TEST: '/test'
+export enum PATH  {
+    ENT_NEW_PASSWORD= "/new_password",
+    LOGIN = '/login',
+    PASSWORD_REC ='/pass_rec',
+    PROFILE = '/profile',
+    REGISTRATION = '/registration',
+    TEST = '/test',
+    ERROR = '/404'
 }
 
 const Routes = () => {
@@ -31,7 +32,8 @@ const Routes = () => {
                 <Route path={PATH.REGISTRATION}  render={() => <Registration/>}/>
                 <Route path={PATH.TEST}  render={() => <Test/>}/>
 
-                <Route render={() => <Error404/>}/>
+                <Route path={PATH.ERROR} render={() => <Error404/>}/>
+                <Redirect from={'*'} to={PATH.ERROR}/>
              </Switch>
         </main>
     )
